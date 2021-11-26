@@ -7,6 +7,5 @@ target 'BarLocator' do
 
   # Pods for BarLocator
   pod 'Alamofire'
-pod 'SearchTextField'
-pod 'UBottomSheet'
+  pod 'UBottomSheet'
 end

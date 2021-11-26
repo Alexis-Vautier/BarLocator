@@ -1,24 +1,20 @@
 PODS:
   - Alamofire (5.4.4)
-  - SearchTextField (1.2.4)
   - UBottomSheet (1.0.9)
 
 DEPENDENCIES:
   - Alamofire
-  - SearchTextField
   - UBottomSheet
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - SearchTextField
     - UBottomSheet
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
   UBottomSheet: a1c528d907b60e7ec65e1f0987fe6074b2ad3762
 
-PODFILE CHECKSUM: c814f51ad4e979ff4065e716c2554a84e1f89f13
+PODFILE CHECKSUM: ce8420c6af24b01c3f99928a2d75665bb96f2c3a
 
 COCOAPODS: 1.11.2

@@ -10,7 +10,6 @@ import Alamofire
 import CoreLocation
 import MapKit
 import UBottomSheet
-import SearchTextField
 
 class MapViewController: UIViewController {
     var sheetCoordinator: UBottomSheetCoordinator!
