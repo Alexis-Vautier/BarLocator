@@ -54,4 +54,17 @@ struct Brewery: Decodable, Encodable {
             return nil
         }
     }
+    
+    func isFavorited() -> Bool {
+        if let data = UserDefaults.standard.value(forKey: "favorites") as? Data,
+           let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+            if favoritesBreweries.contains(where: { breweryInArray in
+                self.id == breweryInArray.id
+            }) {
+                return true
+            } else {
+                return false
+            }
+        } else { return false }
+    }
 }

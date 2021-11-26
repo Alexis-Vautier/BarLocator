@@ -8,4 +8,6 @@ target 'BarLocator' do
   # Pods for BarLocator
   pod 'Alamofire'
   pod 'UBottomSheet'
+  pod 'SwiftyGif', '~> 5.4'
+
 end

@@ -90,24 +90,6 @@ extension BottomSheetViewController {
 }
 
 extension BottomSheetViewController {
-    func isFavorited(brewery: Brewery?) -> Bool {
-        guard let brewery = brewery else {
-            return false
-        }
-        
-        if let favoritesBreweries = getFavoritesBreweries() {
-            if favoritesBreweries.contains(where: { breweryInArray in
-                brewery.id == breweryInArray.id
-            }) {
-                return true
-            } else {
-                return false
-            }
-        } else { return false }
-    }
-}
-
-extension BottomSheetViewController {
     func getFavoritesBreweries() -> [Brewery]? {
         if let data = UserDefaults.standard.value(forKey:kFavoritesKey) as? Data,
            let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {

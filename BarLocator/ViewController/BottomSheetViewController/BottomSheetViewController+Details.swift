@@ -14,7 +14,7 @@ extension BottomSheetViewController {
         self.brewery = brewery
         setupBreweryDetail(brewery: brewery)
 
-        if isFavorited(brewery: brewery) {
+        if brewery.isFavorited() {
             breweryFavoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             breweryFavoriteButton.setTitle(" Retirer des Favoris", for: .normal)
         } else {
@@ -42,7 +42,8 @@ extension BottomSheetViewController {
 
 extension BottomSheetViewController {
     @IBAction func toggleFavorites() {
-        if isFavorited(brewery: brewery) {
+        guard let brewery = brewery else { return }
+        if brewery.isFavorited() {
             removeFromFavorites()
         } else {
             addToFavorites()

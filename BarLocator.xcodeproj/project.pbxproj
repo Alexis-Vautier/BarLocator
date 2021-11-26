@@ -40,6 +40,7 @@
 		5EF154FF27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154FE27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift */; };
 		5EF1550127516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1550027516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift */; };
 		5EF155032751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF155022751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift */; };
+		5EF1550627518ED700EEE7B7 /* beer-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5EF1550527518ED700EEE7B7 /* beer-gif.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		5EF154FE27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+TableView.swift"; sourceTree = "<group>"; };
 		5EF1550027516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		5EF155022751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+DataManagement.swift"; sourceTree = "<group>"; };
+		5EF1550527518ED700EEE7B7 /* beer-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "beer-gif.gif"; sourceTree = "<group>"; };
 		6635A9C435F706CE54615E0A /* Pods_BarLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		762CBD13FBDBD4D7A667E4F2 /* Pods-BarLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarLocator.debug.xcconfig"; path = "Target Support Files/Pods-BarLocator/Pods-BarLocator.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F949A6E199A0BB9B471186 /* Pods-BarLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarLocator.release.xcconfig"; path = "Target Support Files/Pods-BarLocator/Pods-BarLocator.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		5EA91CD1274ECD7000CC89AF /* BarLocator */ = {
 			isa = PBXGroup;
 			children = (
+				5EF1550427518ECF00EEE7B7 /* Assets */,
 				5EF154EF2751641E00EEE7B7 /* Helper */,
 				5EF154BE274FFAB800EEE7B7 /* View */,
 				5EF154B8274FFA1900EEE7B7 /* ViewController */,
@@ -257,6 +260,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		5EF1550427518ECF00EEE7B7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5EF1550527518ED700EEE7B7 /* beer-gif.gif */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +330,7 @@
 				5EA91CE2274ECD7200CC89AF /* LaunchScreen.storyboard in Resources */,
 				5EF154BB274FFA4500EEE7B7 /* BottomSheetViewController.xib in Resources */,
 				5EF154D2275105CC00EEE7B7 /* BreweriesItemCell.xib in Resources */,
+				5EF1550627518ED700EEE7B7 /* beer-gif.gif in Resources */,
 				5EA91CDF274ECD7200CC89AF /* Assets.xcassets in Resources */,
 				5EA91CDA274ECD7000CC89AF /* Main.storyboard in Resources */,
 				5EF154D42751088400EEE7B7 /* BreweryCollectionCell.xib in Resources */,

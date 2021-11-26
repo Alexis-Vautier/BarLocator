@@ -5,6 +5,7 @@
 //  Created by Alexis Vautier on 26/11/2021.
 //
 
+import SwiftyGif
 import UIKit
 
 class BreweryItemCell: UITableViewCell {
@@ -21,13 +22,29 @@ class BreweryItemCell: UITableViewCell {
         leftImageView.tintColor = UIColor.red
     }
     
-    func configure(brewery: Brewery, distance: String?){
+    func configure(brewery: Brewery, distance: String?) {
+        leftImageView.image = nil
         nameLabel.text = brewery.name
         if let distance = distance {
             descriptionLabel.text = distance
         } else {
             descriptionLabel.text = ""
         }
-        leftImageView.image = UIImage(named: "bier")
+        
+        if brewery.isFavorited() {
+            if let image = try? UIImage(gifName: "beer-gif", levelOfIntegrity: .default) {
+                leftImageView.setGifImage(image)
+            } else {
+                leftImageView.animationManager?.deleteImageView(leftImageView)
+                leftImageView.clear()
+                
+                leftImageView.image = UIImage(named: "bier")
+            }
+        } else {
+            leftImageView.animationManager?.deleteImageView(leftImageView)
+            leftImageView.clear()
+            
+            leftImageView.image = UIImage(named: "bier")
+        }
     }
 }

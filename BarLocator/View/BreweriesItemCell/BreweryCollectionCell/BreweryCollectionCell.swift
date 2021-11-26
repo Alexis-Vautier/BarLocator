@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyGif
 import UIKit
 
 class BreweryCollectionCell: UICollectionViewCell {
@@ -21,12 +22,27 @@ class BreweryCollectionCell: UICollectionViewCell {
     
     func configure(brewery: Brewery, distance: String?){
         nameLabel.text = brewery.name
-        leftImageView.image = UIImage(named: "bier")
         
         if let distance = distance {
             distanceLabel.text = distance
         } else {
             distanceLabel.text = ""
+        }
+        
+        if brewery.isFavorited() {
+            if let image = try? UIImage(gifName: "beer-gif", levelOfIntegrity: .default) {
+                leftImageView.setGifImage(image)
+            } else {
+                leftImageView.animationManager?.deleteImageView(leftImageView)
+                leftImageView.clear()
+                
+                leftImageView.image = UIImage(named: "bier")
+            }
+        } else {
+            leftImageView.animationManager?.deleteImageView(leftImageView)
+            leftImageView.clear()
+            
+            leftImageView.image = UIImage(named: "bier")
         }
     }
 
