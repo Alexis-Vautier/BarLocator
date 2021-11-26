@@ -5,6 +5,7 @@
 //  Created by Alexis Vautier on 26/11/2021.
 //
 
+import CoreLocation
 import Foundation
 import UIKit
 
@@ -94,7 +95,9 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BreweryItemCell", for: indexPath) as? BreweryItemCell,
                searchResults.count > indexPath.row {
                 
-                cell.configure(brewery: searchResults[indexPath.row])
+                let brewery = searchResults[indexPath.row]
+                let formattedDistance = brewery.getFormattedDistanceFrom(location: locationManager.location)
+                cell.configure(brewery: brewery, distance: formattedDistance)
                 return cell
             } else {
                 return UITableViewCell()
@@ -119,7 +122,11 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
                let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
                favoritesBreweries.count > indexPath.row {
                 
-                cell.configure(brewery: favoritesBreweries[indexPath.row])
+                let brewery = favoritesBreweries[indexPath.row]
+                
+                let formattedDistance = brewery.getFormattedDistanceFrom(location: locationManager.location)
+                cell.configure(brewery: brewery, distance: formattedDistance)
+                
                 return cell
             } else {
                 return UITableViewCell()
@@ -130,7 +137,11 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
                let historyBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
                historyBreweries.count > indexPath.row {
                 
-                cell.configure(brewery: historyBreweries[indexPath.row])
+                let brewery = historyBreweries[indexPath.row]
+                
+                let formattedDistance = brewery.getFormattedDistanceFrom(location: locationManager.location)
+                cell.configure(brewery: brewery, distance: formattedDistance)
+                
                 return cell
             } else {
                 return UITableViewCell()

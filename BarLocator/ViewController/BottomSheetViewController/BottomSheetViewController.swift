@@ -32,6 +32,7 @@ class BottomSheetViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    let locationManager = CLLocationManager()
 
     var sheetCoordinator: UBottomSheetCoordinator?
     weak var mapViewControllerDelegate: MapViewControllerDelegate?

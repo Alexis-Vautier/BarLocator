@@ -19,9 +19,13 @@ class BreweryItemCell: UITableViewCell {
         leftImageView.tintColor = UIColor.red
     }
     
-    func configure(brewery: Brewery){
+    func configure(brewery: Brewery, distance: String?){
         nameLabel.text = brewery.name
-        descriptionLabel.text = brewery.phone
+        if let distance = distance {
+            descriptionLabel.text = distance
+        } else {
+            descriptionLabel.text = ""
+        }
         leftImageView.image = UIImage(named: "bier")
     }
 }

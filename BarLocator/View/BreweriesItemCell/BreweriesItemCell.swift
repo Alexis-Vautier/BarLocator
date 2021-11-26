@@ -45,19 +45,8 @@ extension BreweriesItemCell: UICollectionViewDelegate, UICollectionViewDataSourc
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: breweryReuseIdentifier, for: indexPath) as? BreweryCollectionCell {
             let brewery = self.breweries[indexPath.row]
             
-            if let userLocation = locationManager.location,
-               let latitude = Double(brewery.latitude ?? ""),
-               let longitude = Double(brewery.longitude ?? "") {
-                let distance = Int(userLocation.distance(from: CLLocation(latitude: latitude, longitude: longitude)))
-                
-                if distance < 1000 {
-                    cell.configure(brewery: brewery, distance: "\(distance)m")
-                } else {
-                    cell.configure(brewery: brewery, distance: "\(distance / 1000)km")
-                }
-            } else {
-                cell.configure(brewery: brewery, distance: nil)
-            }
+            let formattedDistance = brewery.getFormattedDistanceFrom(location: locationManager.location)
+            cell.configure(brewery: brewery, distance: formattedDistance)
             return cell
         } else {
             return UICollectionViewCell()

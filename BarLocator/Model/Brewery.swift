@@ -38,4 +38,20 @@ struct Brewery: Decodable, Encodable {
         
         return annotation
     }
+    
+    func getFormattedDistanceFrom(location: CLLocation?) -> String? {
+        if let location = location,
+            let latitude = Double(self.latitude ?? ""),
+           let longitude = Double(self.longitude ?? "") {
+            let distance = Int(location.distance(from: CLLocation(latitude: latitude, longitude: longitude)))
+            
+            if distance < 1000 {
+                return "\(distance)m"
+            } else {
+                return "\(distance / 1000)km"
+            }
+        } else {
+            return nil
+        }
+    }
 }
