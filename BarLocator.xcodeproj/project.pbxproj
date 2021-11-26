@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F520CF67010CADD36033D2E /* Pods_BarLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6635A9C435F706CE54615E0A /* Pods_BarLocator.framework */; };
+		5EA91CD3274ECD7000CC89AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA91CD2274ECD7000CC89AF /* AppDelegate.swift */; };
+		5EA91CD5274ECD7000CC89AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA91CD4274ECD7000CC89AF /* SceneDelegate.swift */; };
+		5EA91CD7274ECD7000CC89AF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA91CD6274ECD7000CC89AF /* MapViewController.swift */; };
+		5EA91CDA274ECD7000CC89AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA91CD8274ECD7000CC89AF /* Main.storyboard */; };
+		5EA91CDD274ECD7000CC89AF /* BarLocator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EA91CDB274ECD7000CC89AF /* BarLocator.xcdatamodeld */; };
+		5EA91CDF274ECD7200CC89AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA91CDE274ECD7200CC89AF /* Assets.xcassets */; };
+		5EA91CE2274ECD7200CC89AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA91CE0274ECD7200CC89AF /* LaunchScreen.storyboard */; };
+		5EF154BB274FFA4500EEE7B7 /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF154B9274FFA4500EEE7B7 /* BottomSheetViewController.xib */; };
+		5EF154BC274FFA4500EEE7B7 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154BA274FFA4500EEE7B7 /* BottomSheetViewController.swift */; };
+		5EF154C5274FFACB00EEE7B7 /* BreweryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF154BF274FFACB00EEE7B7 /* BreweryItemCell.xib */; };
+		5EF154C7274FFACB00EEE7B7 /* BreweriesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154C1274FFACB00EEE7B7 /* BreweriesItemCell.swift */; };
+		5EF154D2275105CC00EEE7B7 /* BreweriesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF154D1275105CC00EEE7B7 /* BreweriesItemCell.xib */; };
+		5EF154D42751088400EEE7B7 /* BreweryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF154D32751088400EEE7B7 /* BreweryCollectionCell.xib */; };
+		5EF154D627515F7E00EEE7B7 /* BreweryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154D527515F7E00EEE7B7 /* BreweryItemCell.swift */; };
+		5EF154DB2751606800EEE7B7 /* BreweryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154DA2751606800EEE7B7 /* BreweryCollectionCell.swift */; };
+		5EF154E12751621E00EEE7B7 /* BreweryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154E02751621E00EEE7B7 /* BreweryNetwork.swift */; };
+		5EF154E32751624100EEE7B7 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154E22751624100EEE7B7 /* Brewery.swift */; };
+		5EF154E52751627200EEE7B7 /* CitiesLocatorNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154E42751627200EEE7B7 /* CitiesLocatorNetwork.swift */; };
+		5EF154E7275162CD00EEE7B7 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154E6275162CD00EEE7B7 /* City.swift */; };
+		5EF154E92751634400EEE7B7 /* CryptoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154E82751634400EEE7B7 /* CryptoNetwork.swift */; };
+		5EF154EB2751635C00EEE7B7 /* CryptoMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154EA2751635C00EEE7B7 /* CryptoMarket.swift */; };
+		5EF154EE275163D100EEE7B7 /* BreweryAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154ED275163D100EEE7B7 /* BreweryAnnotationView.swift */; };
+		5EF154F12751642800EEE7B7 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154F02751642800EEE7B7 /* UIView+.swift */; };
+		5EF154F3275165B200EEE7B7 /* MapViewController+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154F2275165B200EEE7B7 /* MapViewController+LocationManager.swift */; };
+		5EF154F52751661E00EEE7B7 /* MapViewController+UBottomSheetCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154F42751661E00EEE7B7 /* MapViewController+UBottomSheetCoordinatorDelegate.swift */; };
+		5EF154F7275166D300EEE7B7 /* MapViewController+MapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154F6275166D300EEE7B7 /* MapViewController+MapViewControllerDelegate.swift */; };
+		5EF154F92751671300EEE7B7 /* MapViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154F82751671300EEE7B7 /* MapViewController+Actions.swift */; };
+		5EF154FB2751679600EEE7B7 /* MapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154FA2751679600EEE7B7 /* MapViewController+MapView.swift */; };
+		5EF154FD27516DCE00EEE7B7 /* BottomSheetViewController+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154FC27516DCE00EEE7B7 /* BottomSheetViewController+Details.swift */; };
+		5EF154FF27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF154FE27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift */; };
+		5EF1550127516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1550027516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift */; };
+		5EF155032751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF155022751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EA91CCF274ECD7000CC89AF /* BarLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA91CD2274ECD7000CC89AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EA91CD4274ECD7000CC89AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5EA91CD6274ECD7000CC89AF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5EA91CD9274ECD7000CC89AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EA91CDC274ECD7000CC89AF /* BarLocator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BarLocator.xcdatamodel; sourceTree = "<group>"; };
+		5EA91CDE274ECD7200CC89AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EA91CE1274ECD7200CC89AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EA91CE3274ECD7200CC89AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF154B9274FFA4500EEE7B7 /* BottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
+		5EF154BA274FFA4500EEE7B7 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		5EF154BF274FFACB00EEE7B7 /* BreweryItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreweryItemCell.xib; sourceTree = "<group>"; };
+		5EF154C1274FFACB00EEE7B7 /* BreweriesItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweriesItemCell.swift; sourceTree = "<group>"; };
+		5EF154D1275105CC00EEE7B7 /* BreweriesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreweriesItemCell.xib; sourceTree = "<group>"; };
+		5EF154D32751088400EEE7B7 /* BreweryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreweryCollectionCell.xib; sourceTree = "<group>"; };
+		5EF154D527515F7E00EEE7B7 /* BreweryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryItemCell.swift; sourceTree = "<group>"; };
+		5EF154DA2751606800EEE7B7 /* BreweryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCollectionCell.swift; sourceTree = "<group>"; };
+		5EF154E02751621E00EEE7B7 /* BreweryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryNetwork.swift; sourceTree = "<group>"; };
+		5EF154E22751624100EEE7B7 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		5EF154E42751627200EEE7B7 /* CitiesLocatorNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesLocatorNetwork.swift; sourceTree = "<group>"; };
+		5EF154E6275162CD00EEE7B7 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		5EF154E82751634400EEE7B7 /* CryptoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoNetwork.swift; sourceTree = "<group>"; };
+		5EF154EA2751635C00EEE7B7 /* CryptoMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMarket.swift; sourceTree = "<group>"; };
+		5EF154ED275163D100EEE7B7 /* BreweryAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAnnotationView.swift; sourceTree = "<group>"; };
+		5EF154F02751642800EEE7B7 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		5EF154F2275165B200EEE7B7 /* MapViewController+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+LocationManager.swift"; sourceTree = "<group>"; };
+		5EF154F42751661E00EEE7B7 /* MapViewController+UBottomSheetCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+UBottomSheetCoordinatorDelegate.swift"; sourceTree = "<group>"; };
+		5EF154F6275166D300EEE7B7 /* MapViewController+MapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		5EF154F82751671300EEE7B7 /* MapViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Actions.swift"; sourceTree = "<group>"; };
+		5EF154FA2751679600EEE7B7 /* MapViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapView.swift"; sourceTree = "<group>"; };
+		5EF154FC27516DCE00EEE7B7 /* BottomSheetViewController+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+Details.swift"; sourceTree = "<group>"; };
+		5EF154FE27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+TableView.swift"; sourceTree = "<group>"; };
+		5EF1550027516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		5EF155022751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+DataManagement.swift"; sourceTree = "<group>"; };
+		6635A9C435F706CE54615E0A /* Pods_BarLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		762CBD13FBDBD4D7A667E4F2 /* Pods-BarLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarLocator.debug.xcconfig"; path = "Target Support Files/Pods-BarLocator/Pods-BarLocator.debug.xcconfig"; sourceTree = "<group>"; };
+		D8F949A6E199A0BB9B471186 /* Pods-BarLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarLocator.release.xcconfig"; path = "Target Support Files/Pods-BarLocator/Pods-BarLocator.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EA91CCC274ECD7000CC89AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F520CF67010CADD36033D2E /* Pods_BarLocator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B7BD74972D4919DEF4282BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				762CBD13FBDBD4D7A667E4F2 /* Pods-BarLocator.debug.xcconfig */,
+				D8F949A6E199A0BB9B471186 /* Pods-BarLocator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4595A0E42291E4CA29BDF0BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6635A9C435F706CE54615E0A /* Pods_BarLocator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E75B2B6274FF347009EBD4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154E22751624100EEE7B7 /* Brewery.swift */,
+				5EF154E6275162CD00EEE7B7 /* City.swift */,
+				5EF154EA2751635C00EEE7B7 /* CryptoMarket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EA91CC6274ECD7000CC89AF = {
+			isa = PBXGroup;
+			children = (
+				5EA91CD1274ECD7000CC89AF /* BarLocator */,
+				5EA91CD0274ECD7000CC89AF /* Products */,
+				0B7BD74972D4919DEF4282BD /* Pods */,
+				4595A0E42291E4CA29BDF0BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5EA91CD0274ECD7000CC89AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EA91CCF274ECD7000CC89AF /* BarLocator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EA91CD1274ECD7000CC89AF /* BarLocator */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154EF2751641E00EEE7B7 /* Helper */,
+				5EF154BE274FFAB800EEE7B7 /* View */,
+				5EF154B8274FFA1900EEE7B7 /* ViewController */,
+				5E75B2B6274FF347009EBD4B /* Model */,
+				5EF154DF2751620D00EEE7B7 /* Network */,
+				5EA91CD2274ECD7000CC89AF /* AppDelegate.swift */,
+				5EA91CD4274ECD7000CC89AF /* SceneDelegate.swift */,
+				5EA91CD8274ECD7000CC89AF /* Main.storyboard */,
+				5EA91CDE274ECD7200CC89AF /* Assets.xcassets */,
+				5EA91CE0274ECD7200CC89AF /* LaunchScreen.storyboard */,
+				5EA91CE3274ECD7200CC89AF /* Info.plist */,
+				5EA91CDB274ECD7000CC89AF /* BarLocator.xcdatamodeld */,
+			);
+			path = BarLocator;
+			sourceTree = "<group>";
+		};
+		5EF154B8274FFA1900EEE7B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154DE275161F200EEE7B7 /* BottomSheetViewController */,
+				5EF154DC275161B100EEE7B7 /* MapViewController */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5EF154BE274FFAB800EEE7B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154EC275163CA00EEE7B7 /* Annotation */,
+				5EF154D827515FB200EEE7B7 /* BreweriesItemCell */,
+				5EF154D727515F9D00EEE7B7 /* BreweryItemCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EF154D727515F9D00EEE7B7 /* BreweryItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154D527515F7E00EEE7B7 /* BreweryItemCell.swift */,
+				5EF154BF274FFACB00EEE7B7 /* BreweryItemCell.xib */,
+			);
+			path = BreweryItemCell;
+			sourceTree = "<group>";
+		};
+		5EF154D827515FB200EEE7B7 /* BreweriesItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154D92751605F00EEE7B7 /* BreweryCollectionCell */,
+				5EF154C1274FFACB00EEE7B7 /* BreweriesItemCell.swift */,
+				5EF154D1275105CC00EEE7B7 /* BreweriesItemCell.xib */,
+			);
+			path = BreweriesItemCell;
+			sourceTree = "<group>";
+		};
+		5EF154D92751605F00EEE7B7 /* BreweryCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154DA2751606800EEE7B7 /* BreweryCollectionCell.swift */,
+				5EF154D32751088400EEE7B7 /* BreweryCollectionCell.xib */,
+			);
+			path = BreweryCollectionCell;
+			sourceTree = "<group>";
+		};
+		5EF154DC275161B100EEE7B7 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5EA91CD6274ECD7000CC89AF /* MapViewController.swift */,
+				5EF154F2275165B200EEE7B7 /* MapViewController+LocationManager.swift */,
+				5EF154F42751661E00EEE7B7 /* MapViewController+UBottomSheetCoordinatorDelegate.swift */,
+				5EF154F6275166D300EEE7B7 /* MapViewController+MapViewControllerDelegate.swift */,
+				5EF154F82751671300EEE7B7 /* MapViewController+Actions.swift */,
+				5EF154FA2751679600EEE7B7 /* MapViewController+MapView.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		5EF154DE275161F200EEE7B7 /* BottomSheetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154BA274FFA4500EEE7B7 /* BottomSheetViewController.swift */,
+				5EF154FC27516DCE00EEE7B7 /* BottomSheetViewController+Details.swift */,
+				5EF154B9274FFA4500EEE7B7 /* BottomSheetViewController.xib */,
+				5EF154FE27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift */,
+				5EF1550027516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift */,
+				5EF155022751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift */,
+			);
+			path = BottomSheetViewController;
+			sourceTree = "<group>";
+		};
+		5EF154DF2751620D00EEE7B7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154E02751621E00EEE7B7 /* BreweryNetwork.swift */,
+				5EF154E42751627200EEE7B7 /* CitiesLocatorNetwork.swift */,
+				5EF154E82751634400EEE7B7 /* CryptoNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5EF154EC275163CA00EEE7B7 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154ED275163D100EEE7B7 /* BreweryAnnotationView.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		5EF154EF2751641E00EEE7B7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5EF154F02751642800EEE7B7 /* UIView+.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EA91CCE274ECD7000CC89AF /* BarLocator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA91CE6274ECD7200CC89AF /* Build configuration list for PBXNativeTarget "BarLocator" */;
+			buildPhases = (
+				5D3AC01D7120CD7D6CC0D4A8 /* [CP] Check Pods Manifest.lock */,
+				5EA91CCB274ECD7000CC89AF /* Sources */,
+				5EA91CCC274ECD7000CC89AF /* Frameworks */,
+				5EA91CCD274ECD7000CC89AF /* Resources */,
+				22647974B722D793529610F6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarLocator;
+			productName = BarLocator;
+			productReference = 5EA91CCF274ECD7000CC89AF /* BarLocator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EA91CC7274ECD7000CC89AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5EA91CCE274ECD7000CC89AF = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 5EA91CCA274ECD7000CC89AF /* Build configuration list for PBXProject "BarLocator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EA91CC6274ECD7000CC89AF;
+			productRefGroup = 5EA91CD0274ECD7000CC89AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EA91CCE274ECD7000CC89AF /* BarLocator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EA91CCD274ECD7000CC89AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA91CE2274ECD7200CC89AF /* LaunchScreen.storyboard in Resources */,
+				5EF154BB274FFA4500EEE7B7 /* BottomSheetViewController.xib in Resources */,
+				5EF154D2275105CC00EEE7B7 /* BreweriesItemCell.xib in Resources */,
+				5EA91CDF274ECD7200CC89AF /* Assets.xcassets in Resources */,
+				5EA91CDA274ECD7000CC89AF /* Main.storyboard in Resources */,
+				5EF154D42751088400EEE7B7 /* BreweryCollectionCell.xib in Resources */,
+				5EF154C5274FFACB00EEE7B7 /* BreweryItemCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22647974B722D793529610F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarLocator/Pods-BarLocator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarLocator/Pods-BarLocator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarLocator/Pods-BarLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D3AC01D7120CD7D6CC0D4A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarLocator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EA91CCB274ECD7000CC89AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF154E92751634400EEE7B7 /* CryptoNetwork.swift in Sources */,
+				5EF155032751702600EEE7B7 /* BottomSheetViewController+DataManagement.swift in Sources */,
+				5EF154F3275165B200EEE7B7 /* MapViewController+LocationManager.swift in Sources */,
+				5EF154C7274FFACB00EEE7B7 /* BreweriesItemCell.swift in Sources */,
+				5EF154F7275166D300EEE7B7 /* MapViewController+MapViewControllerDelegate.swift in Sources */,
+				5EA91CDD274ECD7000CC89AF /* BarLocator.xcdatamodeld in Sources */,
+				5EF154DB2751606800EEE7B7 /* BreweryCollectionCell.swift in Sources */,
+				5EF154FD27516DCE00EEE7B7 /* BottomSheetViewController+Details.swift in Sources */,
+				5EA91CD7274ECD7000CC89AF /* MapViewController.swift in Sources */,
+				5EA91CD3274ECD7000CC89AF /* AppDelegate.swift in Sources */,
+				5EF154BC274FFA4500EEE7B7 /* BottomSheetViewController.swift in Sources */,
+				5EF154E12751621E00EEE7B7 /* BreweryNetwork.swift in Sources */,
+				5EF154F12751642800EEE7B7 /* UIView+.swift in Sources */,
+				5EF154FF27516F7D00EEE7B7 /* BottomSheetViewController+TableView.swift in Sources */,
+				5EF154E52751627200EEE7B7 /* CitiesLocatorNetwork.swift in Sources */,
+				5EA91CD5274ECD7000CC89AF /* SceneDelegate.swift in Sources */,
+				5EF154D627515F7E00EEE7B7 /* BreweryItemCell.swift in Sources */,
+				5EF154EE275163D100EEE7B7 /* BreweryAnnotationView.swift in Sources */,
+				5EF154EB2751635C00EEE7B7 /* CryptoMarket.swift in Sources */,
+				5EF1550127516FEB00EEE7B7 /* BottomSheetViewController+UISearchBarDelegate.swift in Sources */,
+				5EF154E7275162CD00EEE7B7 /* City.swift in Sources */,
+				5EF154F52751661E00EEE7B7 /* MapViewController+UBottomSheetCoordinatorDelegate.swift in Sources */,
+				5EF154FB2751679600EEE7B7 /* MapViewController+MapView.swift in Sources */,
+				5EF154E32751624100EEE7B7 /* Brewery.swift in Sources */,
+				5EF154F92751671300EEE7B7 /* MapViewController+Actions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EA91CD8274ECD7000CC89AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EA91CD9274ECD7000CC89AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EA91CE0274ECD7200CC89AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EA91CE1274ECD7200CC89AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EA91CE4274ECD7200CC89AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EA91CE5274ECD7200CC89AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EA91CE7274ECD7200CC89AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 762CBD13FBDBD4D7A667E4F2 /* Pods-BarLocator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU264M783D;
+				INFOPLIST_FILE = BarLocator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-45DYLJ3P2.BarLocator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EA91CE8274ECD7200CC89AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F949A6E199A0BB9B471186 /* Pods-BarLocator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU264M783D;
+				INFOPLIST_FILE = BarLocator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-45DYLJ3P2.BarLocator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EA91CCA274ECD7000CC89AF /* Build configuration list for PBXProject "BarLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA91CE4274ECD7200CC89AF /* Debug */,
+				5EA91CE5274ECD7200CC89AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EA91CE6274ECD7200CC89AF /* Build configuration list for PBXNativeTarget "BarLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA91CE7274ECD7200CC89AF /* Debug */,
+				5EA91CE8274ECD7200CC89AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EA91CDB274ECD7000CC89AF /* BarLocator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EA91CDC274ECD7000CC89AF /* BarLocator.xcdatamodel */,
+			);
+			currentVersion = 5EA91CDC274ECD7000CC89AF /* BarLocator.xcdatamodel */;
+			path = BarLocator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5EA91CC7274ECD7000CC89AF /* Project object */;
+}

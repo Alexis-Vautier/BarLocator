@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-BarLocator/Pods-BarLocator-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework
+${BUILT_PRODUCTS_DIR}/UBottomSheet/UBottomSheet.framework

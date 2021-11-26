@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j7G-hc-7ju">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Wg1-o1-sdc">
+            <objects>
+                <viewController id="j7G-hc-7ju" customClass="MapViewController" customModule="BarLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vS-Af-DOt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yae-EE-GwZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIV-qg-tQL">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CWB-0z-ofb"/>
+                                    <constraint firstAttribute="width" secondItem="iIV-qg-tQL" secondAttribute="height" multiplier="1:1" id="fPP-OK-FdV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="arrow.clockwise" catalog="system">
+                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reloadBreweries" destination="j7G-hc-7ju" eventType="touchUpInside" id="tEn-SO-OeK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0he-6q-FFK">
+                                <rect key="frame" x="20" y="84" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pk4-MS-W7B"/>
+                                    <constraint firstAttribute="width" secondItem="0he-6q-FFK" secondAttribute="height" multiplier="1:1" id="arT-Q8-p7r"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="location" catalog="system">
+                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="centerLocation" destination="j7G-hc-7ju" eventType="touchUpInside" id="gXR-OD-cqg"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ANH-JL-0HX">
+                                <rect key="frame" x="30" y="54" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="24o-qr-7hD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ANH-JL-0HX" firstAttribute="centerX" secondItem="iIV-qg-tQL" secondAttribute="centerX" id="3qW-Ed-YLW"/>
+                            <constraint firstAttribute="bottom" secondItem="Yae-EE-GwZ" secondAttribute="bottom" id="4vh-zn-8V6"/>
+                            <constraint firstItem="0he-6q-FFK" firstAttribute="width" secondItem="0he-6q-FFK" secondAttribute="height" multiplier="1:1" id="6dz-ah-v51"/>
+                            <constraint firstItem="Yae-EE-GwZ" firstAttribute="leading" secondItem="24o-qr-7hD" secondAttribute="leading" id="6rU-vr-5uB"/>
+                            <constraint firstItem="24o-qr-7hD" firstAttribute="leading" secondItem="iIV-qg-tQL" secondAttribute="leading" constant="-20" id="GFf-By-bYy"/>
+                            <constraint firstItem="24o-qr-7hD" firstAttribute="trailing" secondItem="Yae-EE-GwZ" secondAttribute="trailing" id="JJI-Jl-qPY"/>
+                            <constraint firstItem="0he-6q-FFK" firstAttribute="centerX" secondItem="iIV-qg-tQL" secondAttribute="centerX" id="Kw2-DV-Y8B"/>
+                            <constraint firstItem="Yae-EE-GwZ" firstAttribute="top" secondItem="9vS-Af-DOt" secondAttribute="top" id="SGC-FQ-CaS"/>
+                            <constraint firstItem="iIV-qg-tQL" firstAttribute="top" secondItem="24o-qr-7hD" secondAttribute="top" id="aDx-kT-YXp"/>
+                            <constraint firstItem="0he-6q-FFK" firstAttribute="top" secondItem="iIV-qg-tQL" secondAttribute="bottom" id="hXc-6j-oTO"/>
+                            <constraint firstItem="ANH-JL-0HX" firstAttribute="centerY" secondItem="iIV-qg-tQL" secondAttribute="centerY" id="ndI-kP-0qD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pHM-za-JlX"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ANH-JL-0HX" id="x0G-SN-7pa"/>
+                        <outlet property="locationButtion" destination="0he-6q-FFK" id="p6e-QS-h8A"/>
+                        <outlet property="mapView" destination="Yae-EE-GwZ" id="Aga-9s-B3c"/>
+                        <outlet property="reloadButton" destination="iIV-qg-tQL" id="vWg-Sc-wso"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4w-xu-Lou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="-196.20535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
