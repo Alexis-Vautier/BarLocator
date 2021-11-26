@@ -9,6 +9,8 @@ import UIKit
 
 class BreweryItemCell: UITableViewCell {
 
+    static let kReuseIdentifier = "BreweryItemCell"
+
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

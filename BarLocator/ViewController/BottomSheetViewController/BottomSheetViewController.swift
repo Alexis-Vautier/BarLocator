@@ -11,6 +11,9 @@ import MapKit
 import UBottomSheet
 
 class BottomSheetViewController: UIViewController {
+    let kHistoryKey = "history"
+    let kFavoritesKey = "favorites"
+
     @IBOutlet weak var searchViewDetails: UIView!
 
     @IBOutlet weak var tableView: UITableView!

@@ -10,16 +10,18 @@ import UIKit
 
 class BreweriesItemCell: UITableViewCell {
     let locationManager = CLLocationManager()
+    
+    static let kReuseIdentifier = "BreweriesItemCell"
 
     weak var detailsSheetDelegate: DetailsSheetDelegate?
-    private let breweryReuseIdentifier = "breweryCell"
     @IBOutlet weak var collectionView: UICollectionView!
     var breweries = [Brewery]()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        collectionView.register(UINib(nibName: "BreweryCollectionCell", bundle: nil), forCellWithReuseIdentifier: "breweryCell")
+        collectionView.register(UINib(nibName: BreweryCollectionCell.kReuseIdentifier, bundle: nil),
+                                forCellWithReuseIdentifier: BreweryCollectionCell.kReuseIdentifier)
     }
     
     func configure(breweries: [Brewery]){
@@ -42,7 +44,8 @@ extension BreweriesItemCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: breweryReuseIdentifier, for: indexPath) as? BreweryCollectionCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BreweryCollectionCell.kReuseIdentifier,
+                                                         for: indexPath) as? BreweryCollectionCell {
             let brewery = self.breweries[indexPath.row]
             
             let formattedDistance = brewery.getFormattedDistanceFrom(location: locationManager.location)

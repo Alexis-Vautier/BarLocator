@@ -14,11 +14,9 @@ extension BottomSheetViewController {
         
         var newHistoryBreweries = [Brewery]()
 
-        if let data = UserDefaults.standard.value(forKey:"history") as? Data,
-           let historyBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+        if let historyBreweries = getHistoryBreweries() {
             newHistoryBreweries = historyBreweries
         }
-        
 
         if !newHistoryBreweries.contains(where: { breweryInArray in
             brewery.id == breweryInArray.id
@@ -34,7 +32,7 @@ extension BottomSheetViewController {
         }
         
         if let encoded = try? PropertyListEncoder().encode(newHistoryBreweries) {
-            UserDefaults.standard.set(encoded, forKey: "history")
+            UserDefaults.standard.set(encoded, forKey: kHistoryKey)
         }
         tableView.reloadData()
     }
@@ -44,12 +42,10 @@ extension BottomSheetViewController {
         
         var newFavoritesBreweries = [Brewery]()
 
-        if let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-           let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+        if let favoritesBreweries = getFavoritesBreweries() {
             newFavoritesBreweries = favoritesBreweries
         }
         
-
         if !newFavoritesBreweries.contains(where: { breweryInArray in
             brewery.id == breweryInArray.id
         }) {
@@ -57,7 +53,7 @@ extension BottomSheetViewController {
         }
         
         if let encoded = try? PropertyListEncoder().encode(newFavoritesBreweries) {
-            UserDefaults.standard.set(encoded, forKey: "favorites")
+            UserDefaults.standard.set(encoded, forKey: kFavoritesKey)
             breweryFavoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             breweryFavoriteButton.setTitle(" Retirer des Favoris", for: .normal)
         }
@@ -69,8 +65,7 @@ extension BottomSheetViewController {
         
         var newFavoritesBreweries = [Brewery]()
 
-        if let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-           let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+        if let favoritesBreweries = getFavoritesBreweries() {
             newFavoritesBreweries = favoritesBreweries
         }
         
@@ -86,7 +81,7 @@ extension BottomSheetViewController {
         }
         
         if let encoded = try? PropertyListEncoder().encode(newFavoritesBreweries) {
-            UserDefaults.standard.set(encoded, forKey: "favorites")
+            UserDefaults.standard.set(encoded, forKey: kFavoritesKey)
             breweryFavoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
             breweryFavoriteButton.setTitle(" Ajouter aux Favoris", for: .normal)
         }
@@ -100,8 +95,7 @@ extension BottomSheetViewController {
             return false
         }
         
-        if let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-           let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+        if let favoritesBreweries = getFavoritesBreweries() {
             if favoritesBreweries.contains(where: { breweryInArray in
                 brewery.id == breweryInArray.id
             }) {
@@ -110,5 +104,21 @@ extension BottomSheetViewController {
                 return false
             }
         } else { return false }
+    }
+}
+
+extension BottomSheetViewController {
+    func getFavoritesBreweries() -> [Brewery]? {
+        if let data = UserDefaults.standard.value(forKey:kFavoritesKey) as? Data,
+           let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+            return favoritesBreweries
+        } else { return nil }
+    }
+    
+    func getHistoryBreweries() -> [Brewery]? {
+        if let data = UserDefaults.standard.value(forKey:kHistoryKey) as? Data,
+           let historyBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+            return historyBreweries
+        } else { return nil }
     }
 }

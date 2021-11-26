@@ -18,8 +18,8 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
         }
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "BreweriesItemCell", bundle: nil), forCellReuseIdentifier: "BreweriesItemCell")
-        tableView.register(UINib(nibName: "BreweryItemCell", bundle: nil), forCellReuseIdentifier: "BreweryItemCell")
+        tableView.register(UINib(nibName: BreweriesItemCell.kReuseIdentifier, bundle: nil), forCellReuseIdentifier: BreweriesItemCell.kReuseIdentifier)
+        tableView.register(UINib(nibName: BreweryItemCell.kReuseIdentifier, bundle: nil), forCellReuseIdentifier: BreweryItemCell.kReuseIdentifier)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,14 +41,12 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
                 return 1
             }
         case 1:
-            if let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-               let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
+            if let favoritesBreweries = getFavoritesBreweries() {
                 return favoritesBreweries.count
             } else { return 0 }
         default:
-            if let data = UserDefaults.standard.value(forKey:"history") as? Data,
-               let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data) {
-                return favoritesBreweries.count
+            if let historyBreweries = getHistoryBreweries() {
+                return historyBreweries.count
             } else { return 0 }
         }
     }
@@ -92,7 +90,7 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchBar.isFirstResponder {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "BreweryItemCell", for: indexPath) as? BreweryItemCell,
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreweryItemCell.kReuseIdentifier, for: indexPath) as? BreweryItemCell,
                searchResults.count > indexPath.row {
                 
                 let brewery = searchResults[indexPath.row]
@@ -106,7 +104,7 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
 
         switch indexPath.section {
         case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "BreweriesItemCell", for: indexPath) as? BreweriesItemCell,
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreweriesItemCell.kReuseIdentifier, for: indexPath) as? BreweriesItemCell,
                let closedBreweries = mapViewControllerDelegate?.getClosedBreweries(),
                closedBreweries.count > indexPath.row {
                 
@@ -117,9 +115,8 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
         case 1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "BreweryItemCell", for: indexPath) as? BreweryItemCell,
-               let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-               let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreweryItemCell.kReuseIdentifier, for: indexPath) as? BreweryItemCell,
+               let favoritesBreweries = getFavoritesBreweries(),
                favoritesBreweries.count > indexPath.row {
                 
                 let brewery = favoritesBreweries[indexPath.row]
@@ -132,9 +129,8 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "BreweryItemCell", for: indexPath) as? BreweryItemCell,
-               let data = UserDefaults.standard.value(forKey:"history") as? Data,
-               let historyBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreweryItemCell.kReuseIdentifier, for: indexPath) as? BreweryItemCell,
+               let historyBreweries = getHistoryBreweries(),
                historyBreweries.count > indexPath.row {
                 
                 let brewery = historyBreweries[indexPath.row]
@@ -160,15 +156,12 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0 : break
         case 1:
-            if let data = UserDefaults.standard.value(forKey:"favorites") as? Data,
-               let favoritesBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
+            if let favoritesBreweries = getFavoritesBreweries(),
                favoritesBreweries.count > indexPath.row {
                 showBreweryDetail(brewery: favoritesBreweries[indexPath.row])
             }
         case 2:
-            
-            if let data = UserDefaults.standard.value(forKey:"history") as? Data,
-               let historyBreweries = try? PropertyListDecoder().decode(Array<Brewery>.self, from: data),
+            if let historyBreweries = getHistoryBreweries(),
                historyBreweries.count > indexPath.row {
                 showBreweryDetail(brewery: historyBreweries[indexPath.row])
             }

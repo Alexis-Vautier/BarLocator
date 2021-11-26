@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class BreweryCollectionCell: UICollectionViewCell {
+    static let kReuseIdentifier = "BreweryCollectionCell"
 
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
